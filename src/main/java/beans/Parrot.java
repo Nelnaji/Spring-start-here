@@ -1,9 +1,4 @@
-package entity;
-
-
-import org.springframework.stereotype.Component;
-
-import javax.annotation.PostConstruct;
+package beans;
 
 
 public class Parrot {

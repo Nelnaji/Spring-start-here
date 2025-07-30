@@ -1,18 +1,24 @@
-package entity;
+package beans;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-
+@Component
 public class Person {
 
-    private String name;
+    private String name = "Ella";
 
 
-    private  Parrot parrot;
+    private final  Parrot parrot;
 
-    public Person() {
+
+    // Most real-life example
+    public Person(@Qualifier("parrot2") Parrot parrot) {
+        this.parrot = parrot;
+
     }
+
+
 
     //    @Autowired  Can be ommited starting from Spring v 4.3 when only one constructor
 
@@ -29,9 +35,6 @@ public class Person {
         return parrot;
     }
 
-    public void setParrot(Parrot parrot) {
-        this.parrot = parrot;
-    }
 
     @Override
     public String toString() {

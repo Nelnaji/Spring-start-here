@@ -1,11 +1,8 @@
 package main;
 
 import configuration.ProjectConfig;
-import entity.Parrot;
-import entity.Person;
+import beans.Person;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import java.util.function.Supplier;
 
 public class Main {
     public static void main(String[] args) {
