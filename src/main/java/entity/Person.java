@@ -3,18 +3,19 @@ package entity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class Person {
 
-    private String name = "Alice";
+    private String name;
 
 
-    private final Parrot parrot;
+    private  Parrot parrot;
 
-//    @Autowired  Can be ommited starting from Spring v 4.3 when only one constructor
-    public Person(Parrot parrot) {
-                this.parrot = parrot;
+    public Person() {
     }
+
+    //    @Autowired  Can be ommited starting from Spring v 4.3 when only one constructor
+
 
     public String getName() {
         return name;
@@ -28,7 +29,9 @@ public class Person {
         return parrot;
     }
 
-
+    public void setParrot(Parrot parrot) {
+        this.parrot = parrot;
+    }
 
     @Override
     public String toString() {

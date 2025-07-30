@@ -5,14 +5,12 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
-@Component
+
 public class Parrot {
 
-    private String name = "Koko";
+    private String name;
 
-
-
-
+//    private final Person person;
 
 
 
