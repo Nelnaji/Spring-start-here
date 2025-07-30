@@ -7,16 +7,13 @@ import javax.annotation.PostConstruct;
 
 @Component
 public class Parrot {
-    private String name;
+    private String name = "Koko";
 
     public Parrot() {
+
     }
 
 
-    @PostConstruct
-    public void init(){
-        this.name = "Kiki";
-    }
 
 
 
@@ -27,5 +24,12 @@ public class Parrot {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Parrot{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }
