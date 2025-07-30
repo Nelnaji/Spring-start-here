@@ -8,15 +8,12 @@ public class Person {
 
     private String name = "Alice";
 
-    @Autowired
-    private Parrot parrot;
 
-    public Person() {
-    }
+    private final Parrot parrot;
 
-    public Person(String name, Parrot parrot) {
-        this.name = name;
-        this.parrot = parrot;
+//    @Autowired  Can be ommited starting from Spring v 4.3 when only one constructor
+    public Person(Parrot parrot) {
+                this.parrot = parrot;
     }
 
     public String getName() {
@@ -31,15 +28,12 @@ public class Person {
         return parrot;
     }
 
-    public void setParrot(Parrot parrot) {
-        this.parrot = parrot;
-    }
+
 
     @Override
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
-                ", parrot=" + parrot +
-                '}';
+                ", parrot=" + parrot +                '}';
     }
 }

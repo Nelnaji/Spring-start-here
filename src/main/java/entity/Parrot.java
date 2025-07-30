@@ -7,11 +7,9 @@ import javax.annotation.PostConstruct;
 
 @Component
 public class Parrot {
+
     private String name = "Koko";
 
-    public Parrot() {
-
-    }
 
 
 
